@@ -1,0 +1,15 @@
+# private keys
+
+*.pem
+*.key
+id_rsa
+
+# logs
+
+logs/*
+*.log
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
