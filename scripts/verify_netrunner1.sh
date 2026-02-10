@@ -21,9 +21,9 @@ else
 fi
 
 # Check 3: Passwordless SSH to peer node
-PEER_HOST="netrunner2" # Default peer
-if [ "$(hostname)" == "netrunner2" ]; then
-  PEER_HOST="netrunner1"
+PEER_HOST="netrunner2nat" # Default peer
+if [ "$(hostname)" == "netrunner2natr" ]; then
+  PEER_HOST="netrunner1nat"
 fi
 
 PEER_HOSTNAME=$(ssh -o BatchMode=yes -o ConnectTimeout=5 "$PEER_HOST" \
