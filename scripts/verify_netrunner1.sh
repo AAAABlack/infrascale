@@ -22,7 +22,7 @@ fi
 
 # Check 3: Passwordless SSH to peer node
 PEER_HOST="netrunner2nat" # Default peer
-if [ "$(hostname)" == "netrunner2natr" ]; then
+if [ "$(hostname)" == "netrunner2nat" ]; then
   PEER_HOST="netrunner1nat"
 fi
 
