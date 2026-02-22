@@ -10,8 +10,8 @@
 
 - Static IP & naming:
 
-netrunner1.infranet.netkey (hostname) - 10.0.2.5 (IP)
-netrunner2.infranet.netkey (hostname) - 10.0.2.15 (IP)
+- netrunner1.infranet.netkey (hostname) - 10.0.2.5 (IP)
+- netrunner2.infranet.netkey (hostname) - 10.0.2.15 (IP)
 
 # Zone File Design:
 
@@ -21,22 +21,22 @@ netrunner2.infranet.netkey (hostname) - 10.0.2.15 (IP)
  
 # A records
 
-hostname	FQDN				IP Address 
+hostname	FQDN	|	IP Address 
 ---------------------------------------------------------------
-- netrunner1	netrunner1.infranet.netkey	10.0.2.5
-- netrunner2	netrunner2.infranet.netkey	10.0.2.15
+- netrunner1	| netrunner1.infranet.netkey	| 10.0.2.5
+- netrunner2	| netrunner2.infranet.netkey	| 10.0.2.15
 
 # PTR Records
 
-IP Address	PTR Record
+IP Address	| PTR Record
 ---------------------------------------------------------------
-- 10.0.2.5 	netrunner1.infranet.netkey
-- 10.0.2.15	netrunner2.infranet.netkey
+- 10.0.2.5 | netrunner1.infranet.netkey
+- 10.0.2.15	| netrunner2.infranet.netkey
 
 # CNAME Records
 
-Alias			Points to			Purpose			
+Alias	|		Points to	|	Purpose			
 ---------------------------------------------------------------
-- dns.infranet.netkey	netrunner1.infranet.netkey	DNS alias
-- ldap.infranet.netkey	netrunner1.infranet.netkey	LDAP alias		
-- ns1.infranet.netkey 	netrunner1.infranet.netkey	ns1 (like google)
+- dns.infranet.netkey	| netrunner1.infranet.netkey	| DNS alias
+- ldap.infranet.netkey |	netrunner1.infranet.netkey	| LDAP alias		
+- ns1.infranet.netkey |	netrunner1.infranet.netkey	| ns1 (like google)
