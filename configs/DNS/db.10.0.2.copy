@@ -1,0 +1,21 @@
+;
+; BIND reverse zone file for 10.0.2.0/24
+;
+
+$TTL 604800
+
+@   IN  SOA  netrunner1.infranet.netkey. admin.infranet.netkey. (
+        2026022201  1 ; Serial (YYYYMMDDNN)
+        604800       ; Refresh (1 week)
+        86400        ; Retry (1 day)
+        2419200      ; Expire (4 weeks)
+        604800       ; Negative cache TTL (1 week)
+)
+
+; Name server
+@   IN  NS  netrunner1.infranet.netkey.
+
+; PTR records (last octet only)
+5    IN  PTR  netrunner1.infranet.netkey.
+15   IN  PTR  netrunner2.infranet.netkey.
+25 IN PTR netrunner3.infranet.netkey.

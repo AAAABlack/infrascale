@@ -1,0 +1,27 @@
+
+;
+; BIND zone file for infranet.netkey
+;
+
+$TTL 604800
+
+@   IN  SOA  netrunner1.infranet.netkey. admin.infranet.netkey. (
+        2026022201  1 ; Serial (YYYYMMDDNN)
+        604800       ; Refresh (1 week)
+        86400        ; Retry (1 day)
+        2419200      ; Expire (4 weeks)
+        604800       ; Negative cache TTL (1 week)
+)
+
+; Name server
+@   IN  NS  netrunner1.infranet.netkey.
+
+; A records
+netrunner1  IN  A  10.0.2.5
+netrunner2  IN  A  10.0.2.15
+
+; CNAME aliases
+dns   IN  CNAME  netrunner1
+ldap  IN  CNAME  netrunner1
+ns1   IN  CNAME  netrunner1
+netrunner3 IN A 10.0.2.25

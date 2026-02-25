@@ -1,0 +1,16 @@
+# sysadmin group
+dn: cn=sysadmin,ou=Groups,dc=infranet,dc=netkey
+objectClass: posixGroup
+cn: sysadmin
+gidNumber: 10001
+memberUid: john
+memberUid: jane
+memberUid: mark
+description: System Administrators
+
+# developers group
+dn: cn=developers,ou=Groups,dc=infranet,dc=netkey
+objectClass: posixGroup
+cn: developers
+gidNumber: 10002
+description: Software Developers

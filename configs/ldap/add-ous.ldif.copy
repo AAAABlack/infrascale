@@ -1,0 +1,17 @@
+# Creating People OU
+dn: ou=People,dc=infranet,dc=netkey
+objectClass: organizationalUnit
+ou: People
+description: All user accounts
+
+# Creating Groups OU
+dn: ou=Groups,dc=infranet,dc=netkey
+objectClass: organizationalUnit
+ou: Groups
+description: All groups
+
+# Creating System OU
+dn: ou=System,dc=infranet,dc=netkey
+objectClass: organizationalUnit
+ou: System
+description: System accounts and services

@@ -1,0 +1,47 @@
+# User 1
+dn: uid=john,ou=People,dc=infranet,dc=netkey
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: John Doe
+sn: Doe
+uid: john
+uidNumber: 10001
+gidNumber: 10001
+homeDirectory: /home/john
+loginShell: /bin/bash
+userPassword: {SSHA}ABjzB2RdT8GIL3CeiB+e1s6FBKhFGRGt
+mail: john@infranet.netkey
+description: Infrastructure Administrator
+
+# User 2
+dn: uid=jane,ou=People,dc=infranet,dc=netkey
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Jane Smith
+sn: Smith
+uid: jane
+uidNumber: 10002
+gidNumber: 10001
+homeDirectory: /home/jane
+loginShell: /bin/bash
+userPassword: {SSHA}jZPXJzBJGaEa1pceB6qZ7bdqG701yyzX
+mail: jane@infranet.netkey
+description: System Operator
+
+# User 3
+dn: uid=mark,ou=People,dc=infranet,dc=netkey
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Mark Iplier
+sn: Iplier
+uid: mark
+uidNumber: 10003
+gidNumber: 10001
+homeDirectory: /home/mark
+loginShell: /bin/bash
+userPassword: {SSHA}r9rNx7lA9bu0OLdfC5RLa9DqRsmoMXiV
+mail: mark@infranet.netkey
+description: Compliance Officer
