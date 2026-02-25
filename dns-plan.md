@@ -1,7 +1,7 @@
 # Choosing domain name:
 
 - The domain/zone name will be infranet.netkey. example: netrunner1.infranet.netkey
-
+- Forward zone file: /var/cache/bind/db.infranet.netkey
 - It goes without saying that this a private domain and not accessible by anyone outside of this private infrascale.
 
 # IP Address Scheme: 
@@ -32,6 +32,8 @@ IP Address	| PTR Record
 ---------------------------------------------------------------
 - 10.0.2.5 | netrunner1.infranet.netkey
 - 10.0.2.15	| netrunner2.infranet.netkey
+
+- Reverse zone file: /var/cache/bind/db.10.0.2
 
 # CNAME Records
 
