@@ -1,0 +1,96 @@
+
+# ── Docker Compose configuration for InfraScale Module 04 ─────────
+version: "3.8"
+
+services:
+  # ── Redis Cache Service ──────────────────────────────────────────
+  redis:
+    image: docker.io/library/redis:7-alpine
+    container_name: infrascale-redis
+    restart: unless-stopped
+
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          cpus: "0.5"
+
+    volumes:
+      - redis_data:/data
+
+    networks:
+      - infrascale-net
+
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  # ── Python Web Application Service ──────────────────────────────
+  webapp:
+    build:
+      context: ../dockerfiles/webapp
+      dockerfile: Dockerfile
+
+    container_name: infrascale-webapp
+    restart: unless-stopped
+
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - FLASK_ENV=production
+
+    depends_on:
+      redis:
+        condition: service_healthy
+
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+          cpus: "1.0"
+
+    networks:
+      - infrascale-net
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  # ── Nginx Reverse Proxy Service ─────────────────────────────────
+  nginx:
+    build:
+      context: ../dockerfiles/nginx
+      dockerfile: Dockerfile
+
+    container_name: infrascale-nginx
+    restart: unless-stopped
+
+    ports:
+      - "8080:80"
+
+    depends_on:
+      webapp:
+        condition: service_healthy
+
+    networks:
+      - infrascale-net
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/nginx-health"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+# ── Network Definition ─────────────────────────────────────────────
+networks:
+  infrascale-net:
+    driver: bridge
+
+# ── Volume Definition ──────────────────────────────────────────────
+volumes:
+  redis_data:
