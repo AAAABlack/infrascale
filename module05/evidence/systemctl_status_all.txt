@@ -1,0 +1,13 @@
+  UNIT                          LOAD   ACTIVE SUB     DESCRIPTION
+  infrascale-health.service     loaded active running InfraScale Health Check HTTP Endpoint
+● infrascale-healthsnap.service loaded failed failed  InfraScale Health Snapshot
+  infrascale-logagg.service     loaded active running InfraScale Log Aggregation Service
+  infrascale-cleanup.timer      loaded active waiting InfraScale Log Cleanup — Daily at 02:30
+  infrascale-healthsnap.timer   loaded active waiting InfraScale Health Snapshot — Every 5 Minutes
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+5 loaded units listed. Pass --all to see loaded but inactive units, too.
+To show all installed unit files use 'systemctl list-unit-files'.

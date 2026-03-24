@@ -1,0 +1,30 @@
+[Unit]
+Description=InfraScale Log Aggregation Service
+Documentation=https://github.com/AAAABlack/infrascale
+
+# Start AFTER health service
+After=infrascale-health.service
+
+# Hard dependency on health service
+Requires=infrascale-health.service
+
+
+[Service]
+Type=simple
+
+User=infrascale
+Group=infrascale
+
+ExecStart=/opt/infrascale/bin/logagg.sh
+
+Restart=on-failure
+RestartSec=10s
+
+StartLimitInterval=60s
+StartLimitBurst=3
+
+SyslogIdentifier=infrascale-logagg
+
+
+[Install]
+WantedBy=multi-user.target

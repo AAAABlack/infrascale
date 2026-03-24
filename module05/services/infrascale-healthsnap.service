@@ -1,0 +1,14 @@
+[Unit]
+Description=InfraScale Health Snapshot
+
+After=infrascale-health.service
+Requires=infrascale-health.service
+
+
+[Service]
+Type=oneshot
+User=infrascale
+
+ExecStart=/bin/bash -c 'curl -s http://localhost:8081/health >> /opt/infrascale/logs/health_snapshots.log'
+
+SyslogIdentifier=infrascale-healthsnap

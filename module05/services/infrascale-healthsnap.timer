@@ -1,0 +1,13 @@
+[Unit]
+Description=InfraScale Health Snapshot — Every 5 Minutes
+
+
+[Timer]
+OnCalendar=*:0/5
+Persistent=true
+
+Unit=infrascale-healthsnap.service
+
+
+[Install]
+WantedBy=timers.target

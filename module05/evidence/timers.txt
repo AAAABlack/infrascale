@@ -1,0 +1,18 @@
+NEXT                             LEFT LAST                              PASSED UNIT                         ACTIVATES
+Tue 2026-03-24 17:30:00 CET  2min 54s Tue 2026-03-24 17:25:16 CET 1min 48s ago infrascale-healthsnap.timer  infrascale-healthsnap.service
+Tue 2026-03-24 17:31:13 CET   4min 8s Tue 2026-03-24 16:31:16 CET    55min ago anacron.timer                anacron.service
+Tue 2026-03-24 18:26:09 CET     59min Tue 2026-03-24 17:24:09 CET 2min 56s ago fwupd-refresh.timer          fwupd-refresh.service
+Wed 2026-03-25 00:00:00 CET        6h Tue 2026-03-24 10:51:58 CET       6h ago dpkg-db-backup.timer         dpkg-db-backup.service
+Wed 2026-03-25 00:00:00 CET        6h Tue 2026-03-24 10:51:58 CET       6h ago logrotate.timer              logrotate.service
+Wed 2026-03-25 00:23:32 CET        6h Tue 2026-03-24 13:30:06 CET 3h 56min ago motd-news.timer              motd-news.service
+Wed 2026-03-25 02:09:09 CET        8h Tue 2026-03-24 13:43:20 CET 3h 43min ago apt-daily.timer              apt-daily.service
+Wed 2026-03-25 02:30:22 CET        9h -                                      - infrascale-cleanup.timer     infrascale-cleanup.service
+Wed 2026-03-25 05:42:41 CET       12h Tue 2026-03-24 13:29:49 CET 3h 56min ago plocate-updatedb.timer       plocate-updatedb.service
+Wed 2026-03-25 06:05:44 CET       12h Tue 2026-03-24 12:59:05 CET 4h 27min ago man-db.timer                 man-db.service
+Wed 2026-03-25 06:49:57 CET       13h Tue 2026-03-24 11:16:17 CET       6h ago apt-daily-upgrade.timer      apt-daily-upgrade.service
+Wed 2026-03-25 11:07:39 CET       17h Tue 2026-03-24 11:07:03 CET       6h ago systemd-tmpfiles-clean.timer systemd-tmpfiles-clean.service
+Sun 2026-03-29 03:10:49 CEST   4 days Mon 2026-03-23 11:00:23 CET            - e2scrub_all.timer            e2scrub_all.service
+Mon 2026-03-30 01:31:19 CEST   5 days Mon 2026-03-23 11:16:51 CET            - fstrim.timer                 fstrim.service
+
+14 timers listed.
+Pass --all to see loaded but inactive timers, too.

@@ -1,0 +1,50 @@
+Mar 24 12:55:07 netrunner1 systemd[1]: infrascale-health.service: Main process exited, code=exited, status=226/NAMESPACE
+Mar 24 12:55:07 netrunner1 systemd[1]: infrascale-health.service: Failed with result 'exit-code'.
+Mar 24 12:55:13 netrunner1 systemd[1]: infrascale-health.service: Scheduled restart job, restart counter is at 4.
+Mar 24 12:55:13 netrunner1 systemd[1]: Started infrascale-health.service - InfraScale Health Check HTTP Endpoint.
+Mar 24 12:55:13 netrunner1 (python3)[52481]: infrascale-health.service: Failed to set up mount namespacing: /opt/infrascale/logs: No such file or directory
+Mar 24 12:55:13 netrunner1 systemd[1]: infrascale-health.service: Main process exited, code=exited, status=226/NAMESPACE
+Mar 24 12:55:13 netrunner1 systemd[1]: infrascale-health.service: Failed with result 'exit-code'.
+Mar 24 12:55:18 netrunner1 systemd[1]: infrascale-health.service: Scheduled restart job, restart counter is at 5.
+Mar 24 12:55:18 netrunner1 systemd[1]: infrascale-health.service: Start request repeated too quickly.
+Mar 24 12:55:18 netrunner1 systemd[1]: infrascale-health.service: Failed with result 'exit-code'.
+Mar 24 12:55:18 netrunner1 systemd[1]: Failed to start infrascale-health.service - InfraScale Health Check HTTP Endpoint.
+Mar 24 12:59:19 netrunner1 systemd[1]: Started infrascale-health.service - InfraScale Health Check HTTP Endpoint.
+Mar 24 12:59:19 netrunner1 infrascale-health[54265]: InfraScale Health service starting on port 8081
+Mar 24 13:08:04 netrunner1 infrascale-health[54265]: /opt/infrascale/bin/healthcheck.py:22: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+Mar 24 13:08:04 netrunner1 infrascale-health[54265]:   "timestamp": datetime.datetime.utcnow().isoformat() + "Z",
+Mar 24 13:08:04 netrunner1 infrascale-health[54265]: /opt/infrascale/bin/healthcheck.py:40: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+Mar 24 13:08:04 netrunner1 infrascale-health[54265]:   f"[{datetime.datetime.utcnow().isoformat()}] "
+Mar 24 13:08:04 netrunner1 infrascale-health[54265]: [2026-03-24T12:08:04.172247] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+Mar 24 15:17:41 netrunner1 systemd[1]: infrascale-health.service: Main process exited, code=killed, status=9/KILL
+Mar 24 15:17:41 netrunner1 systemd[1]: infrascale-health.service: Failed with result 'signal'.
+Mar 24 15:17:41 netrunner1 systemd[1]: infrascale-health.service: Consumed 2.760s CPU time, 14.5M memory peak, 0B memory swap peak.
+Mar 24 15:17:46 netrunner1 systemd[1]: infrascale-health.service: Scheduled restart job, restart counter is at 1.
+Mar 24 15:17:46 netrunner1 systemd[1]: Started infrascale-health.service - InfraScale Health Check HTTP Endpoint.
+Mar 24 15:17:46 netrunner1 infrascale-health[114945]: InfraScale Health service starting on port 8081
+Mar 24 16:35:02 netrunner1 infrascale-health[114945]: /opt/infrascale/bin/healthcheck.py:22: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+Mar 24 16:35:02 netrunner1 infrascale-health[114945]:   "timestamp": datetime.datetime.utcnow().isoformat() + "Z",
+Mar 24 16:35:02 netrunner1 infrascale-health[114945]: /opt/infrascale/bin/healthcheck.py:40: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+Mar 24 16:35:02 netrunner1 infrascale-health[114945]:   f"[{datetime.datetime.utcnow().isoformat()}] "
+Mar 24 16:35:02 netrunner1 infrascale-health[114945]: [2026-03-24T15:35:02.058204] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+Mar 24 16:40:01 netrunner1 infrascale-health[114945]: [2026-03-24T15:40:01.116052] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+Mar 24 16:45:01 netrunner1 infrascale-health[114945]: [2026-03-24T15:45:01.999710] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+Mar 24 16:50:01 netrunner1 infrascale-health[114945]: [2026-03-24T15:50:01.088291] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+Mar 24 16:55:01 netrunner1 infrascale-health[114945]: [2026-03-24T15:55:01.150391] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+Mar 24 16:59:28 netrunner1 systemd[1]: Stopping infrascale-health.service - InfraScale Health Check HTTP Endpoint...
+Mar 24 16:59:28 netrunner1 systemd[1]: infrascale-health.service: Deactivated successfully.
+Mar 24 16:59:28 netrunner1 systemd[1]: Stopped infrascale-health.service - InfraScale Health Check HTTP Endpoint.
+Mar 24 16:59:28 netrunner1 systemd[1]: infrascale-health.service: Consumed 1.990s CPU time, 9.6M memory peak, 0B memory swap peak.
+Mar 24 16:59:28 netrunner1 systemd[1]: Started infrascale-health.service - InfraScale Health Check HTTP Endpoint.
+Mar 24 16:59:28 netrunner1 infrascale-health[158995]: InfraScale Health service starting on port 8081
+Mar 24 17:00:01 netrunner1 infrascale-health[158995]: /opt/infrascale/bin/healthcheck.py:22: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+Mar 24 17:00:01 netrunner1 infrascale-health[158995]:   "timestamp": datetime.datetime.utcnow().isoformat() + "Z",
+Mar 24 17:00:01 netrunner1 infrascale-health[158995]: /opt/infrascale/bin/healthcheck.py:40: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+Mar 24 17:00:01 netrunner1 infrascale-health[158995]:   f"[{datetime.datetime.utcnow().isoformat()}] "
+Mar 24 17:00:01 netrunner1 infrascale-health[158995]: [2026-03-24T16:00:01.944466] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+Mar 24 17:05:01 netrunner1 infrascale-health[158995]: [2026-03-24T16:05:01.306873] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+Mar 24 17:10:01 netrunner1 infrascale-health[158995]: [2026-03-24T16:10:01.474326] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+Mar 24 17:15:01 netrunner1 infrascale-health[158995]: [2026-03-24T16:15:01.618134] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+Mar 24 17:19:13 netrunner1 infrascale-health[158995]: [2026-03-24T16:19:13.149717] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+Mar 24 17:20:01 netrunner1 infrascale-health[158995]: [2026-03-24T16:20:01.699993] 127.0.0.1 - "GET /health HTTP/1.1" 200 -
+Mar 24 17:25:01 netrunner1 infrascale-health[158995]: [2026-03-24T16:25:01.519498] 127.0.0.1 - "GET /health HTTP/1.1" 200 -

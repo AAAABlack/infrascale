@@ -1,0 +1,46 @@
+
+[Unit]
+Description=InfraScale Health Check HTTP Endpoint
+Documentation=https://github.com/your-team/infrascale
+
+# Start only after full network is ready
+After=network-online.target
+Wants=network-online.target
+
+
+[Service]
+Type=simple
+
+User=infrascale
+Group=infrascale
+WorkingDirectory=/opt/infrascale
+
+# Environment variables
+Environment="HEALTH_PORT=8081"
+Environment="INFRASCALE_VERSION=1.0.0"
+
+# Start command
+ExecStart=/usr/bin/python3 /opt/infrascale/bin/healthcheck.py
+
+# Restart behavior
+Restart=on-failure
+RestartSec=3s
+
+# Restart limits
+StartLimitInterval=30s
+StartLimitBurst=5
+
+# Security hardening
+PrivateTmp=yes
+NoNewPrivileges=yes
+ProtectSystem=strict
+ReadWritePaths=/opt/infrascale/logs
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=infrascale-health
+
+
+[Install]
+WantedBy=multi-user.target

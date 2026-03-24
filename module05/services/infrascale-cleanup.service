@@ -1,0 +1,24 @@
+
+[Unit]
+Description=InfraScale Log Cleanup Job
+Documentation=https://github.com/AAAABlack/infrascale
+
+# One-shot job (runs and exits)
+# Triggered by timer, not manually enabled
+
+
+[Service]
+Type=oneshot
+User=infrascale
+
+ExecStart=/usr/bin/find /opt/infrascale/logs -name "*.log" -mtime +7 -delete
+ExecStart=/usr/bin/journalctl --vacuum-time=30d
+
+# Lower CPU priority
+Nice=10
+
+SyslogIdentifier=infrascale-cleanup
+
+
+[Install]
+# Leave empty (timer controls it)

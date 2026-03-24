@@ -1,0 +1,22 @@
+
+[Unit]
+Description=InfraScale Log Cleanup — Daily at 02:30
+Documentation=https://github.com/AAAABlack/infrascale
+
+
+[Timer]
+# Every day at 02:30
+OnCalendar=*-*-* 02:30:00
+
+# Run missed jobs after boot
+Persistent=true
+
+# Avoid all nodes running at exact same time
+RandomizedDelaySec=60
+
+# Link to service
+Unit=infrascale-cleanup.service
+
+
+[Install]
+WantedBy=timers.target
