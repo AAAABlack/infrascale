@@ -25,6 +25,8 @@ hostname	FQDN	|	IP Address
 ---------------------------------------------------------------
 - netrunner1	| netrunner1.infranet.netkey	| 10.0.2.5
 - netrunner2	| netrunner2.infranet.netkey	| 10.0.2.15
+- netrunner3	| netrunner3.infranet.netkey	| 10.0.2.35
+- netrunner4	| netrunner4.infranet.netkey	| 10.0.2.45
 
 # PTR Records
 
