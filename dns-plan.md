@@ -12,6 +12,8 @@
 
 - netrunner1.infranet.netkey (hostname) - 10.0.2.5 (IP)
 - netrunner2.infranet.netkey (hostname) - 10.0.2.15 (IP)
+- netrunner3.infranet.netkey (hostname) - 10.0.2.35 (IP)
+- netrunner4.infranet.netkey (hostname) - 10.0.2.45 (IP)
 
 # Zone File Design:
 
@@ -34,7 +36,9 @@ IP Address	| PTR Record
 ---------------------------------------------------------------
 - 10.0.2.5 | netrunner1.infranet.netkey
 - 10.0.2.15	| netrunner2.infranet.netkey
-
+- 10.0.2.35	| netrunner3.infranet.netkey
+- 10.0.2.45	| netrunner4.infranet.netkey
+  
 - Reverse zone file: /var/cache/bind/db.10.0.2
 
 # CNAME Records
