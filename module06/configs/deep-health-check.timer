@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Deep Health Check Every 30 Seconds
+[Timer]
+OnBootSec=30s
+OnUnitActiveSec=30s
+AccuracySec=1s
+[Install]
+WantedBy=timers.target
+sudo systemctl daemon-reload
+sudo systemctl enable --now deep-health-check.timer
+systemctl list-timers | grep deep-health

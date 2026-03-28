@@ -1,0 +1,6 @@
+[Unit]
+Description=Deep Health Check for InfraScale
+After=network.target
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/deep-health-check.sh

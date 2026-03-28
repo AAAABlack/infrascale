@@ -1,0 +1,55 @@
+
+==================== Architecture ====================
+
+CLIENT
+  |
+  v
+DNS SERVER + LOAD BALANCER
+Hostname: netrunner1.infranet.netkey
+IP: 10.0.2.5
+Role:
+  - BIND9 DNS (resolves domain → load balancer IP)
+  - HAProxy (distributes traffic across backend nodes)
+
+  |
+  v
+==================== LOAD BALANCER (HAProxy) ====================
+Receives traffic on :80
+Performs:
+  - Load balancing (round-robin / leastconn)
+  - Health checks (GET /health)
+
+  |----------------------|----------------------|
+  v                      v                      v
+
+==================== BACKEND NODE 1 ====================
+Hostname: netrunner2.infranet.netkey
+IP: 10.0.2.15
+Role:
+  - Nginx (reverse proxy on :80)
+  - Application container (running on :8082)
+
+==================== BACKEND NODE 2 ====================
+Hostname: netrunner3.infranet.netkey
+IP: 10.0.2.35
+Role:
+  - Nginx (reverse proxy on :80)
+  - Application container (running on :8082)
+
+==================== BACKEND NODE 3 ====================
+Hostname: netrunner4.infranet.netkey
+IP: 10.0.2.45
+Role:
+  - Nginx (reverse proxy on :80)
+  - Application container (running on :8082)
+
+===============================================================
+
+REQUEST FLOW:
+Client
+ → DNS resolves app.infranet.netkey → 10.0.2.5
+ → HAProxy (netrunner1.infranet.netkey)
+ → One backend node (netrunner2 / 3 / 4)
+ → Nginx (:80)
+ → Application (:8082)
+ → Response back to client
